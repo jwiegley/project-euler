@@ -1,6 +1,6 @@
 module Euler001 where
 
--- | 1
+-- | Problem
 --
 -- >>> euler001
 -- 233168
