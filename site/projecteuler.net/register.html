@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from projecteuler.net/register by HTTrack Website Copier/3.x [XR&CO'2010], Fri, 02 Nov 2012 23:17:42 GMT -->
+<head>
+<meta charset="utf-8" />
+<meta name="author" content="Colin Hughes" />
+<meta name="description" content="A website dedicated to the fascinating world of mathematics and programming" />
+<meta name="keywords" content="programming,mathematics,problems,puzzles" />
+
+<title>Project Euler</title>
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="stylesheet" type="text/css" href="style_main.css" />
+<link rel="stylesheet" type="text/css" href="style_light.css" /></head>
+
+<body>
+<div id="container">
+
+   <div id="nav" class="noprint">
+      <ul>
+<li><a href="about.html" title="About" accesskey="h">About</a></li>
+<li id="current"><a href="register.html" title="Register" accesskey="1">Register</a></li>
+<li><a href="problems.html" title="Problems" accesskey="2">Problems</a></li>
+<li><a href="login.html" title="Login" accesskey="3">Login</a></li>
+      </ul>
+   </div>
+<div id="info_panel"><a href="rss2_euler.xml"><img src="images/icon_rss.png" alt="RSS Feed" title="RSS Feed" /></a><a href="http://projecteuler.net/secure=yes"><img src="images/icon_lock.png" alt="Use secure connection" title="Use secure connection" /></a></div>
+
+<div id="logo" class="noprint">
+   <img src="images/pe_banner_light.png" alt="Project Euler .net" />
+</div>
+
+<div id="content">
+<h2>Register</h2>
+<form name="form" method="post" action="http://projecteuler.net/register" style="width:350px;" class="form_box">
+<table class="no_border" style="width:300px;">
+<tr>
+	<td><div style="text-align:right;">Username:</div></td>
+   <td><input size="20" maxlength="32" type="text" id="username" name="username" autocomplete="off" value="" /></td>
+</tr>
+<tr>
+   <td><div style="text-align:right;">Email:</div></td>
+   <td><input size="20" maxlength="64" type="text" name="email" autocomplete="off" value="" /></td>
+</tr>
+<tr>
+	<td><div style="text-align:right;">Password:</div></td>
+   <td><input size="20" maxlength="32" type="password" name="password" /></td>
+</tr>
+<tr>
+   <td><div style="text-align:right;">Confirm Password:</div></td>
+   <td><input size="20" maxlength="32" type="password" name="confirmpassword" /></td>
+</tr>
+<tr>
+   <td colspan="2">
+   <div style="text-align:center;">
+      <img src="captcha/image_show3cc2.png?ekey=4861bc3e9346" id="captcha" style="border:1px solid #999;width:120px;height:40px;" id="image" onclick="update_code();" title="Click to reload a new image" /><br />
+      <a href="captcha/image_play.wav" style="text-decoration:none;"><img src="captcha/audio_icon.gif" style="vertical-align:middle;" /> Audio</a>
+   </div>
+   </td>
+</tr>
+<tr>
+	<td><div style="text-align:right;">Confirmation Code:</div></td>
+   <td><div style="text-align:left;"><input size="6" maxlength="6" type="text" name="confirm" autocomplete="off" value="" /></div></td>
+</tr>
+<tr>
+	<td><input type="hidden" name="reg" /></td>
+   <td style="text-align:left;"><input type="submit" value="Register" /></td>
+</tr>
+</table>
+</form>
+<p>Username cannot contain more than 16 characters (passwords are limited to 32 characters) and they may only contain<br />
+upper/lower case alphanumeric characters (A-Z, a-z, 0-9), dot (.), hyphen (-), and underscore (_).</p>
+
+
+<script type="text/javascript">
+<!--Start
+var t=1000*60*20;
+function update_code() {
+   captcha.src = "captcha/image_show6c5e.png?ekey=4861bc3e9346&amp;unique=" + Math.random();
+   setTimeout("update_code();",t);
+}
+setTimeout("update_code();",t);
+document.getElementById('username').focus();
+//End-->
+</script>
+
+</div>
+
+
+
+
+
+<div id="footer" class="noprint">
+<a href="copyright.html">Project Euler Copyright Information</a>
+<!--/Creative Commons License--><!-- <rdf:RDF xmlns="http://web.resource.org/cc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+   <Work rdf:about="">
+      <license rdf:resource="http://creativecommons.org/licenses/by-nc-sa/2.0/uk/" />
+   <dc:type rdf:resource="http://purl.org/dc/dcmitype/Text" />
+   </Work>
+   <License rdf:about="http://creativecommons.org/licenses/by-nc-sa/2.0/uk/"><permits rdf:resource="http://web.resource.org/cc/Reproduction"/><permits rdf:resource="http://web.resource.org/cc/Distribution"/><requires rdf:resource="http://web.resource.org/cc/Notice"/><requires rdf:resource="http://web.resource.org/cc/Attribution"/><prohibits rdf:resource="http://web.resource.org/cc/CommercialUse"/><permits rdf:resource="http://web.resource.org/cc/DerivativeWorks"/><requires rdf:resource="http://web.resource.org/cc/ShareAlike"/></License></rdf:RDF> -->
+</div>
+</div>
+<div style="height:1px;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </div></body>
+
+<!-- Mirrored from projecteuler.net/register by HTTrack Website Copier/3.x [XR&CO'2010], Fri, 02 Nov 2012 23:17:45 GMT -->
+</html>
