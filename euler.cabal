@@ -18,14 +18,18 @@ test-suite doctests
   default-language: Haskell98
   type:    exitcode-stdio-1.0
   main-is: doctests.hs
+  ghc-options: -O -Wall -Werror
   build-depends:
       base == 4.*
     , directory >= 1.0 && < 1.3
     , doctest   >= 0.8 && <= 0.10
     , filepath  >= 1.3 && < 1.4
-  ghc-options: -Wall -Werror
 
-Executable Euler003
-  Main-is:       Euler003.hs
+Library
   default-language: Haskell98
   Build-depends: base            >= 4 && < 5
+               , array           >= 0.4.0.1
+  exposed-modules:
+    Euler001
+    Euler002
+    Euler003
