@@ -1,5 +1,3 @@
-{-# LANGUAGE BangPatterns #-}
-
 module Euler005 where
 
 -- | Problem 5
