@@ -2,7 +2,7 @@ Name:                euler
 Version:             0.0.1
 Synopsis:            Solutions to Project Euler in Haskell
 Description:         Solutions to Project Euler in Haskell
-License-file:        LICENSE
+License-file:        doc/LICENSE
 License:             MIT
 Author:              John Wiegley
 Maintainer:          johnw@newartisans.com
