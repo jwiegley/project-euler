@@ -13,6 +13,7 @@ main = getSources >>= \sources -> doctest $
   : "-idist/build/autogen"
   : "-optP-include"
   : "-optPdist/build/autogen/cabal_macros.h"
+  : "-O"
   : sources
 
 getSources :: IO [FilePath]
