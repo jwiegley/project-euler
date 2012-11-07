@@ -16,7 +16,7 @@ module Euler006 where
 --
 -- >>> euler006 10
 -- 2640
--- >>> euler005 100
+-- >>> euler006 100
 -- 25164150
 
 sumOfSquares :: Int -> Int

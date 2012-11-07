@@ -11,7 +11,7 @@ import qualified Data.Vector.Unboxed as V
 -- What is the largest prime factor of the number 600851475143 ?
 --
 -- >>> euler003 13195
--- [5,7,13,29]
+-- fromList [5,7,13,29]
 -- >>> V.last $ euler003 600851475143
 -- 6857
 
