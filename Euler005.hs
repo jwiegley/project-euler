@@ -1,5 +1,7 @@
 module Euler005 where
 
+import Euler003
+
 -- | Problem 5
 --
 -- 2520 is the smallest number that can be divided by each of the numbers from
@@ -10,16 +12,14 @@ module Euler005 where
 --
 -- >>> euler005 10
 -- 2520
--- >>> euler005b 10
--- 2520
 -- >>> euler005 20
 -- 232792560
--- >>> euler005b 20
--- 232792560
 
-euler005 :: Integer -> Integer
-euler005 n = head $ filter (divisibleByAll n) [n..]
-  where divisibleByAll o y = all (\x -> y `rem` x == 0) [2..o]
+divisibleByAll :: Int -> Int -> Bool
+divisibleByAll n y = all (y `divisibleBy`) [n,n-1..2]
+
+euler005 :: Int -> Int
+euler005 n = head $ filter (divisibleByAll n) [n,n+n..]
 
 ------------------------------------------------------------------------
 
