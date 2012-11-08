@@ -17,7 +17,8 @@ import Data.List
 -- 40824
 
 digits :: Integer -> [Integer]
-digits n = unfoldr (\x -> if x == 0
+digits n = reverse $
+           unfoldr (\x -> if x == 0
                           then Nothing
                           else Just (x `mod` 10, x `div` 10))  n
 
