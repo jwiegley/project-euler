@@ -2,12 +2,13 @@
 
 module Euler011 where
 
-import Euler007
+import           Data.Vector (Vector, (!))
+import qualified Data.Vector as V
 
 -- | Problem 11
 --
--- In the 2020 grid below, four numbers along a diagonal line have been marked
--- in red.
+-- In the 20x20 grid below, four numbers along a diagonal line have been
+-- marked in red.
 --
 --     08 02 22 97 38 15 00 40 00 75 04 05 07 78 52 12 50 77 91 08
 --     49 49 99 40 17 81 18 57 60 87 17 40 98 43 69 48 04 56 62 00
@@ -35,11 +36,11 @@ import Euler007
 -- What is the greatest product of four adjacent numbers in any direction (up,
 -- down, left, right, or diagonally) in the 2020 grid?
 --
--- >>> euler011 dataSet
---
+-- >>> euler011
+-- 70600674
 
-dataSet :: [Int]
-dataSet =
+dataSet :: Vector Int
+dataSet = V.fromList
   [ 08,02,22,97,38,15,00,40,00,75,04,05,07,78,52,12,50,77,91,08
   , 49,49,99,40,17,81,18,57,60,87,17,40,98,43,69,48,04,56,62,00
   , 81,49,31,73,55,79,14,29,93,71,40,67,53,88,30,03,49,13,36,65
@@ -61,6 +62,17 @@ dataSet =
   , 20,73,35,29,78,31,90,01,74,31,49,71,48,86,81,16,23,57,05,54
   , 01,70,54,71,83,51,54,69,16,92,33,48,61,43,52,01,89,19,67,48 ]
 
+-- For a matrix m * n, return the coordinates of every diagonal of length l.
+coords :: Int -> Int -> Int -> [[(Int, Int)]]
+coords m n l = concat [ diags x y | x <- [0..m-1], y <- [0..n-1] ]
+  where diags x y    = filter (all (\(z, w) -> z >=0 && z < m &&
+                                               w >= 0 && w < n)) $
+                       diag x y (-1) ++ diag x y 1
+        diag x y dir = [take l $ zip [x,x+1..] [y,y+dir..]]
+
 
 euler011 :: Int
-euler011 = undefined
+euler011 =
+  maximum $ map (product . elemsAt dataSet) $ coords 20 width 4
+  where elemsAt ds = map (\(x, y) -> ds ! ((x * width) + y))
+        width     = 20
