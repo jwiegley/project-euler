@@ -24,6 +24,8 @@ digits n = unfoldr (\x -> if x == 0
 nextDigits :: Int -> Integer -> Int -> Integer
 nextDigits n x i = x `div` (10^i) `mod` (10^n)
 
+log10 :: Integer -> Int
+log10 x = I# (integerLogBase# 10 x)
+
 euler008 :: Int -> Integer -> Integer
-euler008 n x = maximum $ map (product . digits . nextDigits n x) [0..lim x]
-  where lim y = I# (integerLogBase# 10 y)
+euler008 n x = maximum $ map (product . digits . nextDigits n x) [0..log10 x]
