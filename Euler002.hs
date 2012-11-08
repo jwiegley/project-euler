@@ -10,11 +10,12 @@ module Euler002 where
 -- Find the sum of all the even-valued terms in the sequence which do not
 -- exceed four million.
 --
--- >>> euler002
+-- >>> euler002 4000000
 -- 4613732
 
 fib :: [Integer]
-fib = 1 : 2 : fib' 1 2 where fib' x y = x + y : fib' y (x + y)
+fib = fib' 0 1
+  where fib' x y = let z = x + y in z : fib' y z
 
-euler002 :: Integer
-euler002 = sum $ takeWhile (<4000000) $ filter even $ fib
+euler002 :: Integer -> Integer
+euler002 n = sum $ takeWhile (< n) $ filter even $ fib
