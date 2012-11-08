@@ -1,5 +1,3 @@
-{-# LANGUAGE MagicHash #-}
-
 module Euler011 where
 
 import           Data.Vector (Vector, (!))

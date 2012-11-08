@@ -20,10 +20,10 @@ sieve n = let vec = V.replicate (n+1) True
           in foldl' (\v x -> v // [ (y, False)
                                   | y <- [x*2,x*3..n]]) vec [2..n]
 
-divisibleBy :: Int -> Int -> Bool
+divisibleBy :: Integer -> Integer -> Bool
 divisibleBy n x = x > 1 && n `mod` x == 0
 
-euler003 :: Int -> Vector Int
-euler003 n =
-  V.filter (n `divisibleBy`) . V.findIndices id . sieve . limit $ n
+euler003 :: Integer -> Vector Int
+euler003 n = V.filter ((n `divisibleBy`) . toInteger)
+             . V.findIndices id . sieve . limit $ n
   where limit = ceiling . sqrt . fromIntegral

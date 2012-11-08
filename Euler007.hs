@@ -16,12 +16,12 @@ import Control.Monad
 -- >>> euler007 10001
 -- 104743
 
-divisibleByAny :: Int -> Int -> Bool
+divisibleByAny :: Integer -> Integer -> Bool
 divisibleByAny n y = any (y `divisibleBy`) [3..lim n]
   where lim = ceiling . sqrt . fromIntegral
 
-primes :: [Int]
+primes :: [Integer]
 primes = 2 : filter (not . join divisibleByAny) [3,5..]
 
-euler007 :: Int -> Int
+euler007 :: Int -> Integer
 euler007 n = primes !! (n - 1)

@@ -15,5 +15,5 @@ import Euler007
 -- >>> euler010 2000000
 -- 142913828922
 
-euler010 :: Int -> Int
+euler010 :: Integer -> Integer
 euler010 n = sum $ takeWhile (<n) primes

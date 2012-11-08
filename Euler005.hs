@@ -15,8 +15,8 @@ import Euler003
 -- >>> euler005 20
 -- 232792560
 
-divisibleByAll :: Int -> Int -> Bool
+divisibleByAll :: Integer -> Integer -> Bool
 divisibleByAll n y = all (y `divisibleBy`) [n,n-1..2]
 
-euler005 :: Int -> Int
+euler005 :: Integer -> Integer
 euler005 n = head $ filter (divisibleByAll n) [n,n+n..]
