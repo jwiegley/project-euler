@@ -2,8 +2,6 @@ module Euler007 where
 
 import Euler003
 
-import Control.Monad
-
 -- | Problem 7
 --
 -- By listing the first six prime numbers: 2, 3, 5, 7, 11, and 13, we can see
@@ -15,13 +13,6 @@ import Control.Monad
 -- 13
 -- >>> euler007 10001
 -- 104743
-
-divisibleByAny :: Integer -> Integer -> Bool
-divisibleByAny n y = any (y `divisibleBy`) [3..lim n]
-  where lim = ceiling . sqrt . fromIntegral
-
-primes :: [Integer]
-primes = 2 : filter (not . join divisibleByAny) [3,5..]
 
 euler007 :: Int -> Integer
 euler007 n = primes !! (n - 1)

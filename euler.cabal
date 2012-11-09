@@ -1,5 +1,5 @@
 Name:                euler
-Version:             0.0.1
+Version:             1.0.0
 Synopsis:            Solutions to Project Euler in Haskell
 Description:         Solutions to Project Euler in Haskell
 License-file:        doc/LICENSE
@@ -45,5 +45,6 @@ Library
     Euler012
     Euler013
     Euler014
+    Euler015
     Euler016
     Euler020

@@ -4,7 +4,6 @@ import Euler003
 
 import Data.List
 import Data.Foldable hiding (foldl')
-import Data.Maybe
 
 -- | Problem 12
 --
@@ -43,8 +42,7 @@ triangleNums = tail $ scanl (+) 0 [1..]
 
 factors :: Integer -> [Integer]
 factors n = nub $ 1 : n : (foldMap (\x -> [x, n `div` x]) $
-                           filter (n `divisibleBy`) [2..lim n])
-  where lim = ceiling . sqrt . fromIntegral
+                           filter (n `divisibleBy`) [2..isqrt n])
 
 euler012 :: Int -> Integer
 euler012 n = head $ filter ((> n) . length . factors) triangleNums
