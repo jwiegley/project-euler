@@ -2,7 +2,7 @@
 
 module Euler010 where
 
-import Euler007
+import Euler003
 
 -- | Problem 10
 --
