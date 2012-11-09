@@ -9,8 +9,12 @@ module Euler015 where
 --
 -- >>> euler015 2
 -- 6
--- >>> euler015 20
---
+-- >>> euler015 3
+-- 20
+-- >>> euler015 4
+-- 70
+-- (ghci) euler015 20                -- this is just too slow to test
+-- 137846528820
 
 euler015 :: Int -> Int
 euler015 n = go 0 0
