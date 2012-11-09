@@ -30,4 +30,4 @@ euler015slow n = go 0 0
                         in seq l $ seq r $ l + r
 
 euler015 :: Integer -> Integer
-euler015 n = let x = fac n in fac (n * 2) `div` x*x
+euler015 n = fac (n * 2) `div` ((fac n)^2)
