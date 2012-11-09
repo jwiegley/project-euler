@@ -13,14 +13,21 @@ module Euler015 where
 -- 20
 -- >>> euler015 4
 -- 70
--- (ghci) euler015 20                -- this is just too slow to test
+-- >>> euler015 20
 -- 137846528820
 
-euler015 :: Int -> Int
-euler015 n = go 0 0
+fac :: Integer -> Integer
+fac 1 = 1
+fac n = n * fac (n - 1)
+
+euler015slow :: Int -> Int
+euler015slow n = go 0 0
   where go x y
           | x == n && y == n = 1
           | x > n || y > n   = 0
           | otherwise = let l = go x (y + 1)
                             r = go (x + 1) y
                         in seq l $ seq r $ l + r
+
+euler015 :: Integer -> Integer
+euler015 n = fac (n * 2) `div` (fac n)^2
