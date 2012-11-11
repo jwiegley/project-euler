@@ -11,4 +11,5 @@ import Euler008
 -- >>> euler016
 -- 1366
 
+euler016 :: Integer
 euler016 = sum (digits (2^1000))
